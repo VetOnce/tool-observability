@@ -3,7 +3,7 @@
 
 [install]
 # Use the latest compatible versions
-auto = "latest"
+auto = "auto"
 
 [install.scopes]
 # Scope configuration if needed
