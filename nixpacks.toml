@@ -1,0 +1,12 @@
+[phases.setup]
+nixPkgs = ["...", "bun"]
+nixpkgsArchive = "master"
+
+[phases.install]
+cmds = ["bun install"]
+
+[phases.build]
+cmds = ["bun run typecheck || true"]
+
+[start]
+cmd = "bun start"
