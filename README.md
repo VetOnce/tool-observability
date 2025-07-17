@@ -1,8 +1,12 @@
-# Observability Server
+# Observability Tool
 
-Real-time monitoring server for Claude Code hooks integration with Manager dashboard.
+Real-time monitoring system for Claude Code agents with Vue.js dashboard and WebSocket server.
 
 **Repository**: https://github.com/VetOnce/tool-observability
+
+This tool consists of two parts:
+1. **Server**: WebSocket server that receives events from Claude Code hooks
+2. **Client**: Vue.js dashboard for real-time visualization of agent activities
 
 ## Features
 
@@ -115,3 +119,35 @@ Events are stored in SQLite with:
 - Tool usage statistics
 - Error logs
 - Performance metrics
+
+## Vue Client
+
+The client directory contains a Vue.js dashboard for monitoring agent activities.
+
+### Client Setup
+
+```bash
+cd client
+npm install
+npm run dev
+```
+
+### Client Configuration
+
+Create a `.env` file in the client directory:
+
+```env
+# WebSocket URL for the observability server
+VITE_WEBSOCKET_URL=wss://your-domain.railway.app/stream
+VITE_MAX_EVENTS_TO_DISPLAY=100
+```
+
+### Client Features
+
+- 🎯 Real-time event timeline with filtering
+- 📊 Live activity pulse chart
+- 🎨 Theme customization (dark/light/custom themes)
+- 📱 Responsive design for mobile/desktop
+- 🔍 Filter by source app, session ID, or event type
+- 💬 Chat transcript viewer for agent conversations
+- 🎯 Sticky scroll for live monitoring
