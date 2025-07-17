@@ -1,0 +1,13 @@
+# Bun configuration file
+# This file helps Nixpacks detect that this is a Bun project
+
+[install]
+# Use the latest compatible versions
+auto = "latest"
+
+[install.scopes]
+# Scope configuration if needed
+
+[install.lockfile]
+# Save the lockfile in binary format
+save = true
