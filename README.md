@@ -2,6 +2,8 @@
 
 Real-time monitoring server for Claude Code hooks integration with Manager dashboard.
 
+**Repository**: https://github.com/VetOnce/tool-observability
+
 ## Features
 
 - 🔄 Real-time WebSocket streaming
@@ -66,11 +68,18 @@ EVENT_RETENTION_DAYS=30
 
 ## Railway Deployment
 
-1. Add as a new service in Railway
-2. Set root directory to this folder
-3. Use the included Dockerfile
-4. Generate a public domain
-5. Set environment variables
+This service is deployed on Railway:
+- **Project**: organize-myself
+- **Service Name**: tools (in Railway dashboard)
+- **Builder**: Dockerfile
+- **Runtime**: Bun
+
+### Deployment Steps
+
+1. Service is connected to `VetOnce/tool-observability` GitHub repository
+2. Uses the included Dockerfile for Bun runtime
+3. Automatic deployments on push to master
+4. Environment variables configured in Railway dashboard
 
 ## Docker
 
